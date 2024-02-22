@@ -14,15 +14,18 @@
   </head>
   <body>
     <div class="container">
+      <div class="buttons">
+        <a href="listagem.html" class="btn">Ver formulário</a>
+      </div>
       <header>
-        <img src="/assets/logo.png" alt="Logo" class="logo" />
-        <h1 class="heading">Formulário Desenvolvimento WEB II</h1>
+        <img src="/assets/icon.png" alt="Logo" class="logo" />
+        <h1 class="heading">Formulário coquette</h1>
       </header>
       <form action="#" method="post" class="form">
         <div class="form-group">
           <label for="nome">Nome:</label>
           <input type="text" id="nome" name="nome" required />
-          
+
         </div>
         <div class="form-group">
           <label for="telefone">Telefone:</label>
@@ -33,7 +36,7 @@
           <input type="email" id="email" name="email" required />
         </div>
         <div class="form-group">
-          <label for="descricao">Descrição sobre você:</label>
+          <label for="descricao">Descrição sobre você e sobre o que está proucurando:</label>
           <textarea
             id="descricao"
             name="descricao"
@@ -68,15 +71,18 @@
 
         try {
           // Faz uma requisição para a sua API
-          await fetch("INSIRA O LINK DA SUA API AQUI", {
+          await fetch("https://meu-primeiro-coiso.onrender.com/formulario", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(dados),
           });
+
+          alert("foemulario cadastrado com sucesso")
         } catch (error) {
           console.log(error);
+          alert("erro ao cadastrar usuário")
         }
       }
     </script>
